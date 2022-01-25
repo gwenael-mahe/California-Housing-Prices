@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/style.css">
+    <title>California Housing</title>
+</head>
+<body>
+    <header>
+        <h1>California Housing</h1>
+    </header>
+    <main>
+        <div id="container">
+            <form action="{{ url_for('result')}}" method = "POST">
+                <label for="latitude">Latitude</label>
+                <input type="text" name="latitude" class="input"><br>
+                <label for="longitude">longitude</label>
+                <input type="text" name="longitude" class="input"><br>
+                <label for="housing_median_age">housing_median_age</label>
+                <input type="number" name="housing_median_age" class="input"><br>
+                <label for="total_rooms">total_rooms</label>
+                <input type="number" name="total_rooms" class="input"><br>
+                <label for="total_bedrooms">total_bedrooms</label>
+                <input type="number" name="total_bedrooms" class="input"><br>
+                <label for="population">population</label>
+                <input type="number" name="population" class="input"><br>
+                <label for="households">households</label>
+                <input type="number" name="households" class="input"><br>
+                <label for="median_income">median_income</label>
+                <input type="number" name="median_income" class="input"><br>
+                <label for="ocean_proximity">ocean_proximity</label>
+                <select id="ocean_proximity" name="ocean_proximity">
+                    <option value="2">Island</option>
+                    <option value="0"><1H Ocean</option>
+                    <option value="4">Near Ocean</option>
+                    <option value="3">Near Bay</option>
+                    <option value="1">Inland</option>
+                </select><br>
+                <input type="submit" value="Submit">
+            </form><br>
+        </div>
+    </main>
+    <footer>
+        <p>it's a footer</p>
+    </footer>
+</body>
+</html>
